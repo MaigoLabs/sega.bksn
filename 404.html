@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>不愧是你</title>
+    <meta charset="utf-8">
+    <style>
+        html {
+            height: 100%;
+            width: 100%;
+        }
+
+        body {
+            margin: 0;
+            height: 100%;
+            width: 100%;
+        }
+
+        .container {
+            height: 100%;
+            width: 100%;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="bksn.png">
+        <a id="link" href="https://sega.bsnk.me"><img src="bsnk.png"></a>
+    </div>
+
+    <script>
+        // When document is loaded, set the href to the current url under sega.bsnk.me
+        document.addEventListener('DOMContentLoaded', () => {
+            var links = document.getElementById('link');
+            links.href = 'https://sega.bsnk.me' + window.location.pathname;
+        });
+    </script>
+</body>
+</html>
