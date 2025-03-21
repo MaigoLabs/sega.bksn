@@ -32,10 +32,15 @@
     </div>
 
     <script>
+        let isSega = window.location.hostname === 'sega.bksn.me';
+
         // When document is loaded, set the href to the current url under sega.bsnk.me
         document.addEventListener('DOMContentLoaded', () => {
             var links = document.getElementById('link');
-            links.href = 'https://sega.bsnk.me' + window.location.pathname;
+            if (isSega)
+                links.href = 'https://sega.bsnk.me' + window.location.pathname;
+            else
+                links.href = 'https://bsnk.me' + window.location.pathname;
         });
     </script>
 </body>
